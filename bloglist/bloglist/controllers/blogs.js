@@ -36,7 +36,7 @@ blogRouter.post('/', async (request, response, next) => {
 
     try {
         const savedBlog = await blog.save()
-        logger.info(`added "${blog.title}" to the blog list`)
+        logger.info(`added ${blog.title} to the blog list`)
         user.blogs = user.blogs.concat(savedBlog._id)
         await user.save()
         logger.info(`blog linked to user ${user.username}`)

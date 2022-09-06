@@ -28,7 +28,7 @@ const Blog = (props) => {
   const addComment = () => {
     const updatedBlog =({
       ...blog,
-      comments: NEED TO FIGURE OUT WHAT TO PUT HERE
+      comments: blog.comments.concat([comment])
     })
     props.updateBlog(updatedBlog)
     setBlogObject(updatedBlog)

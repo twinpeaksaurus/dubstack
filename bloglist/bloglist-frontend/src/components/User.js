@@ -16,12 +16,4 @@ const User = (props) => {
     )
 }
 
-
-/* DRAFT OF LINKS AND REACT ROUTING
-
-<Link to {`/users/${user.id}`}>
-{user.username}
-</Link>
-
-*/
 export default User
