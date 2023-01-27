@@ -8,7 +8,7 @@ const Profile = (props) => {
 
     return (
         <div>
-            Blogs Linked by {user.username}
+            Posts by {user.name}
             <ul>
                 {user.blogs.map(blog => {
                     return (<li>
@@ -19,6 +19,10 @@ const Profile = (props) => {
                     )
                 })}
             </ul>
+            Categories:
+
+            <br />
+            Description:
         </div >
     )
 }

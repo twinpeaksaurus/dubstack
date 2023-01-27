@@ -12,6 +12,8 @@ import userService from './services/users'
 import User from './components/User'
 import Profile from './components/Profile'
 import IndividualBlog from './components/IndividualBlog'
+import { Button } from 'react-bootstrap'
+
 
 import {
   //BrowserRouter as Router,
@@ -189,7 +191,7 @@ const Users = ({allUsers})
   const byLikes = (b1, b2) => b2.likes - b1.likes
 
   return (
-    <div>
+    <div className='container'>
       <h2>Dubstack</h2>
       <div>
         <Link style={padding} to="/blogs">Blogs</Link>
@@ -219,7 +221,7 @@ const Users = ({allUsers})
           <div>
 
 
-            <Togglable buttonLabel="Add new blog" ref={blogFormRef}>
+            <Togglable buttonLabel="New Post" ref={blogFormRef}>
               <BlogForm
                 createBlog={createBlog}
               />
@@ -227,9 +229,9 @@ const Users = ({allUsers})
             <br />
             <Routes>
               <Route path="/users/:id" element={<Profile user={foundUser} />} />
-              <Route path="/blogs/:id" element={<IndividualBlog 
-              blog={foundBlog}
-              updateBlog={updateBlog} />} />
+              <Route path="/blogs/:id" element={<IndividualBlog
+                blog={foundBlog}
+                updateBlog={updateBlog} />} />
               <Route path="/blogs" element={
                 <div>
                   <h2>Blog Posts</h2>

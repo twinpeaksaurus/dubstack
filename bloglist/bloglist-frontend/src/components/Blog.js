@@ -52,11 +52,9 @@ const Blog = (props) => {
           <Link to={`/blogs/${blog.id}`}>
             {blog.title}
           </Link> 
-          <br /> 
-          Author: {blog.author}
-           <br/>
+                     <br/>
           <Link to={`/users/${blog.user.id}`}>
-            {blog.user.username}
+            {blog.user.name}
           </Link>
           <br />
           <button onClick={toggleVisibility}>{buttonLabel}</button></p>

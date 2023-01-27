@@ -9,7 +9,7 @@ const User = (props) => {
     return (
         <div>
             <p><Link to={`/users/${user.id}`}>
-                {user.username}
+                {user.name}'s Blog
             </Link>
                 : {'         '} {user.blogs.length}</p>
         </div>
